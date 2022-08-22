@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 
 using namespace std;
 
@@ -40,4 +40,48 @@ int main() {
     return 0;
 }
 
-// Implement the functions here
+// Implement the functions here*/
+
+
+#include <iostream>
+
+using namespace std;
+
+// function ProtoType
+int volume(int height, int width, int length);
+
+// create Box struct
+struct Box {
+  int height;
+  int width;
+  int length;
+};
+
+int main(void) {
+
+  // create varible
+  int totalVolume;
+
+  // crate objects
+  struct Box box1, box2;
+
+  //Get user input
+  cout << "Enter length, height, width of box 1 : ";
+  cin >> box1.length >> box1.height >> box1.width;
+
+  cout << "Enter length, height, width of box 2 : ";
+  cin >> box2.length >> box2.height >> box2.width;
+
+  //pass aregument to function
+  totalVolume = volume(box1.height, box1.width, box1.length) +
+                volume(box2.height, box2.width, box2.length);
+
+  // printf Total volume of Boxs
+  cout << "Volume of Box is : " << totalVolume << endl;
+
+  return 0;
+}
+//function implimentation
+int volume(int height, int width, int length) {
+  return height * width * length;
+}
