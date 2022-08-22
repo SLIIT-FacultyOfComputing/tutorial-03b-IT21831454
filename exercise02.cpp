@@ -67,8 +67,6 @@ int main(void) {
     Surfac(box2Height, box2Width, box2Length);
 
   cout<<"Total Surface is : "<<totalSurface;
-    
-  
 
   return 0;
 }
